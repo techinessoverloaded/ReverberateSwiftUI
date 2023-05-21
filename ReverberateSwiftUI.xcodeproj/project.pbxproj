@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA1DF52A2A1A374C00B1C425 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1DF5292A1A374C00B1C425 /* GlobalVariables.swift */; };
 		DA88DB572A19242D000B7664 /* ReverberateSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA88DB562A19242D000B7664 /* ReverberateSwiftUIApp.swift */; };
 		DA88DB592A19242D000B7664 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA88DB582A19242D000B7664 /* ContentView.swift */; };
 		DA88DB5B2A19242F000B7664 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA88DB5A2A19242F000B7664 /* Assets.xcassets */; };
@@ -16,11 +17,14 @@
 		DA88DB6D2A19242F000B7664 /* ReverberateSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA88DB6C2A19242F000B7664 /* ReverberateSwiftUITests.swift */; };
 		DA88DB772A19242F000B7664 /* ReverberateSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA88DB762A19242F000B7664 /* ReverberateSwiftUIUITests.swift */; };
 		DA88DB792A19242F000B7664 /* ReverberateSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA88DB782A19242F000B7664 /* ReverberateSwiftUIUITestsLaunchTests.swift */; };
+		DABAC5F82A1A70FD00FEAD71 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABAC5F72A1A70FD00FEAD71 /* GlobalConstants.swift */; };
 		DAC133B12A1A28E400CC9174 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC133B02A1A28E400CC9174 /* MainView.swift */; };
 		DAC133B42A1A29D300CC9174 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC133B32A1A29D300CC9174 /* HomeView.swift */; };
 		DAC133B62A1A29F400CC9174 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC133B52A1A29F400CC9174 /* SearchView.swift */; };
 		DAC133B82A1A2A0600CC9174 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC133B72A1A2A0600CC9174 /* LibraryView.swift */; };
 		DAC133BA2A1A2A1200CC9174 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC133B92A1A2A1200CC9174 /* ProfileView.swift */; };
+		DAC133BC2A1A31AF00CC9174 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC133BB2A1A31AF00CC9174 /* BlurView.swift */; };
+		DAC133BE2A1A33E900CC9174 /* MiniPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC133BD2A1A33E900CC9174 /* MiniPlayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA1DF5292A1A374C00B1C425 /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		DA88DB532A19242D000B7664 /* ReverberateSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReverberateSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA88DB562A19242D000B7664 /* ReverberateSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverberateSwiftUIApp.swift; sourceTree = "<group>"; };
 		DA88DB582A19242D000B7664 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,11 +58,14 @@
 		DA88DB722A19242F000B7664 /* ReverberateSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReverberateSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA88DB762A19242F000B7664 /* ReverberateSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverberateSwiftUIUITests.swift; sourceTree = "<group>"; };
 		DA88DB782A19242F000B7664 /* ReverberateSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverberateSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DABAC5F72A1A70FD00FEAD71 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		DAC133B02A1A28E400CC9174 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		DAC133B32A1A29D300CC9174 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DAC133B52A1A29F400CC9174 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		DAC133B72A1A2A0600CC9174 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		DAC133B92A1A2A1200CC9174 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		DAC133BB2A1A31AF00CC9174 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		DAC133BD2A1A33E900CC9174 /* MiniPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniPlayerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +122,8 @@
 				DA88DB5F2A19242F000B7664 /* Persistence.swift */,
 				DA88DB612A19242F000B7664 /* ReverberateSwiftUI.xcdatamodeld */,
 				DA88DB5C2A19242F000B7664 /* Preview Content */,
+				DA1DF5292A1A374C00B1C425 /* GlobalVariables.swift */,
+				DABAC5F72A1A70FD00FEAD71 /* GlobalConstants.swift */,
 			);
 			path = ReverberateSwiftUI;
 			sourceTree = "<group>";
@@ -152,6 +162,8 @@
 				DAC133B52A1A29F400CC9174 /* SearchView.swift */,
 				DAC133B72A1A2A0600CC9174 /* LibraryView.swift */,
 				DAC133B92A1A2A1200CC9174 /* ProfileView.swift */,
+				DAC133BB2A1A31AF00CC9174 /* BlurView.swift */,
+				DAC133BD2A1A33E900CC9174 /* MiniPlayerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -290,9 +302,13 @@
 				DAC133BA2A1A2A1200CC9174 /* ProfileView.swift in Sources */,
 				DA88DB632A19242F000B7664 /* ReverberateSwiftUI.xcdatamodeld in Sources */,
 				DA88DB592A19242D000B7664 /* ContentView.swift in Sources */,
+				DAC133BE2A1A33E900CC9174 /* MiniPlayerView.swift in Sources */,
+				DABAC5F82A1A70FD00FEAD71 /* GlobalConstants.swift in Sources */,
 				DAC133B62A1A29F400CC9174 /* SearchView.swift in Sources */,
+				DA1DF52A2A1A374C00B1C425 /* GlobalVariables.swift in Sources */,
 				DAC133B82A1A2A0600CC9174 /* LibraryView.swift in Sources */,
 				DAC133B42A1A29D300CC9174 /* HomeView.swift in Sources */,
+				DAC133BC2A1A31AF00CC9174 /* BlurView.swift in Sources */,
 				DAC133B12A1A28E400CC9174 /* MainView.swift in Sources */,
 				DA88DB572A19242D000B7664 /* ReverberateSwiftUIApp.swift in Sources */,
 			);

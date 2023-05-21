@@ -15,6 +15,8 @@ struct ReverberateSwiftUIApp: App {
         WindowGroup {
             MainView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext).environment(\.contextSaveAction, contextSaveAction)
+                .environmentObject(GlobalVariables())
+                .environmentObject(GlobalConstants())
         }
     }
 }
