@@ -10,11 +10,22 @@ import SwiftUI
 @main
 struct ReverberateSwiftUIApp: App {
     let persistenceController = PersistenceController.shared
-
+    let contextSaveAction = PersistenceController.shared.save
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            MainView()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext).environment(\.contextSaveAction, contextSaveAction)
         }
+    }
+}
+
+private struct MyEnvironmentKey: EnvironmentKey {
+    static let defaultValue: () -> Void = {}
+}
+
+extension EnvironmentValues {
+    var contextSaveAction: () -> Void {
+        get { self[MyEnvironmentKey.self] }
+        set { self[MyEnvironmentKey.self] = newValue }
     }
 }
