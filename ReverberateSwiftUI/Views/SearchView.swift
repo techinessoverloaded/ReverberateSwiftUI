@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct SearchView: View {
+    
+    @State private var path = NavigationPath()
+    @State private var searchString = ""
+    @State private var searchScope: SearchScope = .songs
+    
     var body: some View {
-        Text("Search")
+        NavigationStack(path: $path) {
+            Text("Browse All")
+            .navigationTitle("Search")
+            .navigationBarTitleDisplayMode(.large)
+        }
+        .searchable(text: $searchString, placement: .navigationBarDrawer, prompt: "Songs, Albums, Artists")
+        .searchScopes($searchScope, activation: .onSearchPresentation) {
+            Text("Songs").tag(SearchScope.songs)
+            Text("Albums").tag(SearchScope.albums)
+            Text("Artists").tag(SearchScope.artists)
+        }
     }
 }
 

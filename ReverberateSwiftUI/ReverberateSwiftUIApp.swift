@@ -11,12 +11,14 @@ import SwiftUI
 struct ReverberateSwiftUIApp: App {
     let persistenceController = PersistenceController.shared
     let contextSaveAction = PersistenceController.shared.save
+    let globalConstants = GlobalConstants()
+    let globalVariables = GlobalVariables()
     var body: some Scene {
         WindowGroup {
             MainView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext).environment(\.contextSaveAction, contextSaveAction)
-                .environmentObject(GlobalVariables())
-                .environmentObject(GlobalConstants())
+                .environmentObject(globalConstants)
+                .environmentObject(globalVariables)
         }
     }
 }

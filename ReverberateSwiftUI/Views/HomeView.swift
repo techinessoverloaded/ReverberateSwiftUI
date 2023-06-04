@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @State var path = NavigationPath()
+    @State var selectedSong: Song?
+    
     var body: some View {
-        Text("Home")
+        NavigationStack(path: $path) {
+            ScrollView(.vertical) {
+                Text("Home")
+            }
+            .navigationTitle(Text("Home"))
+            .navigationBarTitleDisplayMode(.large)
+        }
     }
 }
 
