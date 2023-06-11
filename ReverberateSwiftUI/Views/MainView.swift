@@ -10,17 +10,17 @@ import UIKit
 
 struct MainView: View {
     
-    @State private var selection = 0
     @EnvironmentObject private var globalVariables: GlobalVariables
+    @EnvironmentObject private var appPrefsVM: AppPreferencesVM
     @Namespace var animation
     
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
-            TabView(selection:$selection) {
+            TabView(selection: $appPrefsVM.selectedTabIndex) {
                 HomeView()
                     .tabItem {
                         Image(uiImage:
-                                UIImage(systemName: selection == 0 ? "house.fill" : "house")!)
+                                UIImage(systemName: appPrefsVM.selectedTabIndex == 0 ? "house.fill" : "house")!)
                         Text("Home")
                     }
                     .tag(0)
@@ -34,14 +34,14 @@ struct MainView: View {
                 LibraryView()
                     .tabItem {
                         Image(uiImage:
-                                UIImage(systemName: selection == 2 ? "books.vertical.fill" : "books.vertical")!)
+                                UIImage(systemName: appPrefsVM.selectedTabIndex == 2 ? "books.vertical.fill" : "books.vertical")!)
                         Text("Library")
                     }
                     .tag(2)
                 ProfileView()
                     .tabItem {
                         Image(uiImage:
-                                UIImage(systemName: selection == 3 ? "person.fill" : "person")!)
+                                UIImage(systemName: appPrefsVM.selectedTabIndex == 3 ? "person.fill" : "person")!)
                         Text("Profile")
                     }
                     .tag(3)

@@ -11,6 +11,7 @@ import SwiftUI
 class AppPreferencesVM: ObservableObject {
     @AppStorage("currentTheme") var currentTheme: Int = 1
     @AppStorage("isUserLoggedIn") var isUserLoggedIn: Bool = false
+    @AppStorage("selectedTabIndex") var selectedTabIndex: Int = 0
 }
 
 struct ThemeModifier: ViewModifier {

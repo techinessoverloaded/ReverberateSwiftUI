@@ -84,6 +84,7 @@
 		DAC133BA2A1A2A1200CC9174 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC133B92A1A2A1200CC9174 /* ProfileView.swift */; };
 		DAC133BC2A1A31AF00CC9174 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC133BB2A1A31AF00CC9174 /* BlurView.swift */; };
 		DAC133BE2A1A33E900CC9174 /* MiniPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC133BD2A1A33E900CC9174 /* MiniPlayerView.swift */; };
+		DAE0E72B2A3616E8000B5DEC /* Color+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0E72A2A3616E8000B5DEC /* Color+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,6 +185,7 @@
 		DAC133B92A1A2A1200CC9174 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		DAC133BB2A1A31AF00CC9174 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		DAC133BD2A1A33E900CC9174 /* MiniPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniPlayerView.swift; sourceTree = "<group>"; };
+		DAE0E72A2A3616E8000B5DEC /* Color+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -614,6 +616,7 @@
 			isa = PBXGroup;
 			children = (
 				DA8E8D682A2CD2CB00C53919 /* Extensions.swift */,
+				DAE0E72A2A3616E8000B5DEC /* Color+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -828,6 +831,7 @@
 				DA8E8D4C2A2CC82700C53919 /* Category.swift in Sources */,
 				DA6576A12A35FB9700B6275F /* AppPreferencesVM.swift in Sources */,
 				DA8E8D602A2CCD5A00C53919 /* Artist.swift in Sources */,
+				DAE0E72B2A3616E8000B5DEC /* Color+extension.swift in Sources */,
 				DA8E8D5C2A2CCD5A00C53919 /* Song.swift in Sources */,
 				DA8E8D5D2A2CCD5A00C53919 /* ArtistSearchResult.swift in Sources */,
 				DA8E8D412A2CC82700C53919 /* SortOrder.swift in Sources */,

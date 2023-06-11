@@ -120,4 +120,8 @@ enum Category: Int, CaseIterable, CustomStringConvertible
             return Category.none
         }
     }
+    
+    static var allCasesForBrowsing: [Category] {
+        return allCases.filter { !($0 == Category.none || $0 == .recentlyPlayed) }
+    }
 }
