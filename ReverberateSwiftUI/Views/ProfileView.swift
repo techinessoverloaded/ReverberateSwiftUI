@@ -10,15 +10,18 @@ import SwiftUI
 struct ProfileView: View {
     
     @State private var path = NavigationPath()
+    @EnvironmentObject private var globalConstants: GlobalConstants
     @EnvironmentObject private var globalVariables: GlobalVariables
+    @EnvironmentObject private var appPrefsVM: AppPreferencesVM
+    private var preferenceItems = ["Languages", "Music Genres"]
     
     var body: some View {
         NavigationStack(path: $path) {
             List {
                 Section {
-                    if !globalVariables.isUserLoggedIn {
+                    if !appPrefsVM.isUserLoggedIn {
                         HStack {
-                            Image(systemName: "person.crop.circle.fill")
+                            Image(systemName: globalConstants.profileImage)
                                 .imageScale(.large)
                                 .font(.largeTitle)
                                 .foregroundColor(.gray)
@@ -38,15 +41,32 @@ struct ProfileView: View {
                         .listRowInsets(EdgeInsets(top: 10, leading: 5, bottom: 10, trailing: 5))
                 }
                 Section {
-                    
+                    ForEach(preferenceItems, id: \.self) { preferenceItem in
+                        NavigationLink(value: preferenceItem) {
+                            Text(preferenceItem)
+                        }
+                    }
+                    HStack {
+                        Text("Theme")
+                        Spacer()
+                        VStack(alignment: .trailing) {
+                            Picker("", selection: $appPrefsVM.currentTheme) {
+                                Text("System").tag(0)
+                                Text("Light").tag(1)
+                                Text("Dark").tag(2)
+                            }
+                            .pickerStyle(.segmented)
+                            .frame(width: 200)
+                        }
+                    }
                 } header: {
                     Text("User Preferences")
                         .listRowInsets(EdgeInsets(top: 10, leading: 5, bottom: 10, trailing: 5))
                 }
             }
-            Text(globalVariables.isUserLoggedIn ? "Profile" : "nO")
-                .navigationTitle("Your Profile")
-                .navigationBarTitleDisplayMode(globalVariables.isUserLoggedIn ? .inline : .large)
+            .padding(.bottom, 70)
+            .navigationTitle("Your Profile")
+            .navigationBarTitleDisplayMode(appPrefsVM.isUserLoggedIn ? .inline : .large)
         }
     }
 }

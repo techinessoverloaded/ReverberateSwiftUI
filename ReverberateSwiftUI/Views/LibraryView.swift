@@ -11,13 +11,14 @@ struct LibraryView: View {
     
     @State private var path = NavigationPath()
     @EnvironmentObject private var globalVariables: GlobalVariables
+    @EnvironmentObject private var appPrefsVM: AppPreferencesVM
     
     private var libraryItems: [LibraryItem] {
-        return LibraryItem.getAllCases(isUserLoggedIn: globalVariables.isUserLoggedIn)
+        return LibraryItem.getAllCases(isUserLoggedIn: appPrefsVM.isUserLoggedIn)
     }
     
     private var headerText: String {
-        return globalVariables.isUserLoggedIn ? "Find Reverberate's Whole Collection of Songs, Albums, Artists and Playlists" : "Find your favourite Songs, Albums, Artists, Playlists and Reverberate's Whole Collection"
+        return appPrefsVM.isUserLoggedIn ? "Find Reverberate's Whole Collection of Songs, Albums, Artists and Playlists" : "Find your favourite Songs, Albums, Artists, Playlists and Reverberate's Whole Collection"
     }
     
     var body: some View {
@@ -40,6 +41,7 @@ struct LibraryView: View {
                         .listRowInsets(EdgeInsets.init(top: 10, leading: 5, bottom: 10, trailing: 5))
                 }
             }
+            .padding(.bottom, 70)
             .listStyle(.insetGrouped)
             .navigationTitle("Library")
             .navigationBarTitleDisplayMode(.large)

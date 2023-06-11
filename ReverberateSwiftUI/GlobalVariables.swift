@@ -15,5 +15,4 @@ class GlobalVariables: ObservableObject {
     @Published var audioPlayer: AVAudioPlayer = AVAudioPlayer()
     @Published var recentlyPlayedSongNames: [String] = []
     @Published var recentlyPlayedAlbumNames: [String] = []
-    @Published var isUserLoggedIn: Bool = false
 }

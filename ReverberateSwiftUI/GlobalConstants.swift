@@ -14,7 +14,7 @@ class GlobalConstants: ObservableObject {
     lazy var previousSongIcon = "backward.end.fill"
     lazy var nextSongIcon = "forward.end.fill"
     lazy var closeIcon = "xmark.circle.fill"
-    
+    lazy var profileImage = "person.crop.circle.fill"
     static let isFirstTime = "Is_FiRsT_tImE"
     static let isUserLoggedIn = "Is_UsEr_LoGgEd_In"
     static let themePreference = "ThEmE_PrEfErEnCe"

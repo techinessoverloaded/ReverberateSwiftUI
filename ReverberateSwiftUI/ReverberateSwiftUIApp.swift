@@ -19,6 +19,7 @@ struct ReverberateSwiftUIApp: App {
                 .environment(\.managedObjectContext, persistenceController.container.viewContext).environment(\.contextSaveAction, contextSaveAction)
                 .environmentObject(globalConstants)
                 .environmentObject(globalVariables)
+                .modifier(ThemeModifier())
         }
     }
 }
